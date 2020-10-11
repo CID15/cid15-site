@@ -6,5 +6,15 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: 'www.cid15.org',
+        region: "us-east-1",
+        protocol: "https",
+        hostname: "www.cid15.org"
+      },
+    }
+  ],
 }

@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "cid15-site",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Main site for CID15",
   "version": "0.1.0",
-  "license": "0BSD",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -11,12 +11,18 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy-old": "npm run -n \"-r dotenv/config\" && node deploy.js",
+    "deploy": "node -r dotenv/config deploy.js"
   },
   "dependencies": {
+    "aws-sdk": "^2.771.0",
     "gatsby": "^2.24.67",
+    "gatsby-plugin-s3": "^0.3.5",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
+    "s3-node-client": "^4.4.4"
   },
   "devDependencies": {
     "prettier": "2.1.2"
